@@ -1,0 +1,15 @@
+<h1>Products</h1>
+
+<ul>  
+    <% unless cart.empty? %>
+        <% cart.each do |product| %>
+        <li><%= product %></li>
+        <% end %>
+      <% end %>  
+  </ul>
+  
+<%= form_for :add do |f| %>
+<%= f.label "Product" %>
+<%= f.text_field :product, id: "product" %>
+<%= f.submit "add to cart"%>
+<% end %>
