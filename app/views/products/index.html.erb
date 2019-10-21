@@ -1,0 +1,12 @@
+<h1>Cart Application</h1>
+
+<%= form_for :add_item do |f| %>
+    <%= f.label "Add an item: " %>
+    <%= f.text_field :item, id: "product" %>
+    <%= f.submit "add to cart" %>
+<% end %>
+
+<h2>Current Cart:</h3>
+<% cart.each do |item| %>
+    <h3><%= item %></h3>
+<% end %>
